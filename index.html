@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>F1 Start App</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <meta name="theme-color" content="#01187e">
+  <script defer src="client.js"></script>
+  <style>
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.light {
+  border-radius: 100%;
+  background: #222;
+  margin: 10px;
+}
+
+.light::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.light-strip.on .light:nth-child(1n+3) {
+  background: red;
+}
+
+.f1-lights {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+}
+
+.light-strip {
+  background: black;
+  border-radius: 11px;
+  margin: 0 2px;
+  position: relative;
+  flex: 1;
+}
+
+@media (min-width: 435px) {
+  .light-strip {
+    margin: 0 5px;
+    border-radius: 14px;
+  }
+}
+
+.back-board {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 50%;
+  height: 5%;
+  background: #000;
+  transform: translateY(-50%);
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 1em;
+  margin-bottom: 0;
+}
+
+.time {
+  font-size: 90px;
+  font-size: 12vw;
+  line-height: 1;
+  margin: 1rem;
+  text-transform: uppercase;
+  will-change: transform;
+  text-align: center;
+}
+
+.time.anim {
+  animation: bang 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.best, .credit {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@keyframes bang {
+  from {
+    transform: scale(2);
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+  </style>
+  
+
+</head>
+  <body background="f1.jpg">
+  <h2><font color="#ee4431">Lights out and away we go!</font></h2>
+
+  <div class="f1-lights">
+    <div class="back-board"></div>
+    <div class="light-strip">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+    <div class="light-strip">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+    <div class="light-strip">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+    <div class="light-strip">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+    <div class="light-strip">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+  </div>
+  
+  <p>Başlamak için ekrana dokunun. Formula 1 Pilotları kadar hızlı mısın görelim!</p> 
+  <div class="results"><font color="#ee4431"> <center><b>F1 Pilotları ortalama kalkış süresi:</font> 00.055</center></b>
+    <div class="time">00.000</div>
+    <font color="#ee4431"><div class="best"><b>Senin en iyi kalkış süren:</font> <span>00.000</span></div></b>
+     <div class="credit">F1Start.app | Geliştirici: <a href="https://www.ergun.app"><font color="#ee4431">@ergunsimsekoglu</font></a> | &copy; Made in Istanbul</div> 
+  </div>  
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119877323-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119877323-1');
+</script>
+
+
+</body>
+</html>
+
+
